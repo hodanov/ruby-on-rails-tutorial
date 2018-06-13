@@ -1,0 +1,16 @@
+// Animation
+a {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+body {
+  background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
+}
+.navbar {
+  background-color: inherit;
+}
+.navbar #logo {
+  // color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
