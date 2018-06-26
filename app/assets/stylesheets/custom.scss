@@ -1,4 +1,4 @@
-// Animation
+/* -----Animation----- */
 a {
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -13,4 +13,33 @@ body {
   // color: #fff;
   font-size: 2rem;
   text-transform: uppercase;
+}
+
+/* -----Debug----- */
+.debug_dump {
+  background-color: #000;
+  color: #d8d8d8;
+}
+
+/* -----Card----- */
+.profile-box {
+  height: 80vh;
+  .columns {
+    height: 100%;
+    .column {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .box-user-image {
+        img {
+          border-radius: 50%;
+        }
+      }
+      .box-user-info {
+        text-align: center;
+      }
+    }
+  }
 }

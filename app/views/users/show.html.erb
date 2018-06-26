@@ -1,0 +1,22 @@
+<% provide(:title, @user.name) %>
+<div class="columns">
+  <div class="column">
+
+    <div class="card profile-box">
+      <div class="columns">
+        <div class="column">
+          <div class="box-user-image">
+            <%= gravatar_for @user %>
+          </div>
+          <div class="box-user-info">
+            <h1 class="title"><%= @user.name %></h1>
+            <p class="subtitle"><%= @user.email %></p>
+          </div>
+        </div>
+        <div class="column">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
