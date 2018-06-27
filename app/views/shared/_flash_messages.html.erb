@@ -1,0 +1,6 @@
+<% flash.each do |message_type, message| %>
+<div class="notification <%= message_type %>">
+  <button class="delete has-background-<%= message_type %>"></button>
+  <p class="has-text-<%= message_type %>"><%= message %></p>
+</div>
+<% end %>
