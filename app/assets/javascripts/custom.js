@@ -1,10 +1,15 @@
 $(document).on('turbolinks:load', function() {
 
   Promise.all([])
-   .then(initNavbarBurgar)
-   .then(removeNotification)
-   .then(showSuccessNotification)
+  .then(initFontAwesome)
+  .then(initNavbarBurgar)
+  .then(removeNotification)
+  .then(showSuccessNotification)
 })
+
+function initFontAwesome() {
+  FontAwesome.dom.i2svg()
+}
 
 function initNavbarBurgar() {
   var nuvbarBtn = $('.navbar-burger')
