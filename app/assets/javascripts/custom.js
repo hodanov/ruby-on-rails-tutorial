@@ -4,7 +4,7 @@ $(document).on('turbolinks:load', function() {
   .then(initFontAwesome)
   .then(initNavbarBurgar)
   .then(removeNotification)
-  .then(showSuccessNotification)
+  .then(showNotificationTooltip)
 })
 
 function initFontAwesome() {
@@ -29,10 +29,10 @@ function removeNotification() {
   })
 }
 
-function showSuccessNotification() {
-  var successNotification = $('.notification.success')
-  if (successNotification.length) {
-    $(successNotification).delay(700).animate({
+function showNotificationTooltip() {
+  var notificationTooltip = $('.notification-tooltip')
+  if (notificationTooltip.length && ($(window).width() > 767)) {
+    $(notificationTooltip).delay(700).animate({
       opacity: 1,
       right: '3rem'
     }, 200, 'swing')
