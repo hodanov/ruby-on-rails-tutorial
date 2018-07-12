@@ -15,7 +15,7 @@
         <%= link_to "Help", help_path, class: "navbar-item" %>
         <%= link_to "Contact", contact_path, class: "navbar-item" %>
         <% if logged_in? %>
-          <%= link_to "Users", '#', class: "navbar-item" %>
+          <%= link_to "Users", users_path, class: "navbar-item" %>
           <div class="dropdown is-hoverable navbar-item">
             <div class="dropdown-trigger">
               <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
@@ -28,7 +28,7 @@
             <div class="dropdown-menu" id="dropdown-menu" role="menu">
               <div class="dropdown-content">
                 <%= link_to "Profile", current_user, class: "dropdown-item" %>
-                <%= link_to "Settings", '#', class: "dropdown-item" %>
+                <%= link_to "Settings", edit_user_path(current_user), class: "dropdown-item" %>
                 <hr class="dropdown-divider">
                 <%= link_to "Log out", logout_path, method: :delete, class: "dropdown-item" %>
               </div>
