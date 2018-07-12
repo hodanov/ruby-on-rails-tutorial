@@ -37,8 +37,8 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", user_path(@user)
     assert_select "a[href=?]", edit_user_path(@user)
     assert_select "a[href=?]", logout_path
-    # get users_path
-    # assert_select "title", full_title("All users")
+    get users_path
+    assert_select "title", full_title("All users")
     get user_path(@user)
     assert_select "title", full_title("#{@user.name}")
     get edit_user_path(@user)
