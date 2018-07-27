@@ -1,0 +1,21 @@
+<% provide(:title, 'Forgot password') %>
+<h1 class="title is-1 has-text-centered">Forgot password</h1>
+<div class="columns">
+  <div class="column is-half is-offset-one-quarter">
+    <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+
+      <div class="field">
+        <%= f.label :email, class: "label" %>
+        <div class="control has-icons-left">
+          <%= f.email_field :email, class: "input" %>
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </div>
+      </div>
+
+      <%= f.submit "Submit", class: "button is-primary width-100" %>
+
+    <% end %>
+  </div>
+</div>

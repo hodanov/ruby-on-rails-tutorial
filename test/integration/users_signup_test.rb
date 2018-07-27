@@ -20,7 +20,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     assert_template 'users/new'
     # assert_select 'form[action="/signup"]'
-    assert_select 'div.notification h3.has-text-danger'
+    assert_select 'div.notification .has-text-danger'
   end
 
   test "valid signup information with account activation" do

@@ -3,6 +3,11 @@ a {
   -webkit-transition: all .2s;
   transition: all .2s;
 }
+@mixin css-animation {
+  transition: all .3s;
+}
+
+/* ----- Modify bulma.css ----- */
 body {
   background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
   // background-image: linear-gradient(to right top, #F53731, #FFC35D);
@@ -15,6 +20,9 @@ body {
   font-size: 2rem;
   text-transform: uppercase;
 }
+.label {
+  display: inline-block;
+}
 
 /* ----- Debug ----- */
 .debug_dump {
@@ -23,9 +31,9 @@ body {
 }
 
 /* ----- Animation ----- */
-@mixin css-animation {
-  transition: all .3s;
-}
+
+
+
 
 /* ----- Profile box ----- */
 .profile-box {
