@@ -1,6 +1,26 @@
+<% if logged_in? %>
+<div class="columns">
+  <div class="column">
+    <div class="profile-box">
+      <div class="columns">
+        <div class="column is-one-third post-form">
+          <div class="user-info">
+            <%= render 'shared/user_info' %>
+          </div>
+          <div class="micropost-form">
+            <%= render 'shared/micropost_form' %>
+          </div>
+        </div>
+        <%= render 'shared/feed' %>
+      </div>
+    </div>
+  </div>
+</div>
+<% else %>
 <div class="columns has-text-centered">
   <div class="column">
     <h1 class="title is-1">Welcome to the Sample App</h1>
     <%= link_to "Sign up now", signup_path, class: "button is-primary is-large is-rounded" %>
   </div>
 </div>
+<% end %>

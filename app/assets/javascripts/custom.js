@@ -5,6 +5,7 @@ $(document).on('turbolinks:load', function() {
   .then(initNavbarBurgar)
   .then(removeNotification)
   .then(showNotificationTooltip)
+  .then(checkMaxUploadImageSize)
 })
 
 function initFontAwesome() {
@@ -37,4 +38,13 @@ function showNotificationTooltip() {
       right: '3rem'
     }, 200, 'swing')
   }
+}
+
+function checkMaxUploadImageSize() {
+  $('#micropost_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  })
 }

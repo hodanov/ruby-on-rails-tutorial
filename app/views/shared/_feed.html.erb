@@ -1,0 +1,10 @@
+<% if @feed_items.any? %>
+<div class="column microposts">
+  <div class="microposts-list">
+    <%= render @feed_items %>
+  </div>
+  <div class="pagination-wrapper">
+    <%= will_paginate @feed_items %>
+  </div>
+</div>
+<% end %>

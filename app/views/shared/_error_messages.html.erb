@@ -1,9 +1,9 @@
-<% if @user.errors.any? %>
+<% if object.errors.any? %>
 <div class="notification">
   <div class="delete has-background-danger"></div>
-  <h3 class="subtitle is-3 has-text-danger"><i class="fas fa-exclamation-circle"></i> The form contains <%= pluralize(@user.errors.count, "error") %>.</h3>
+  <h3 class="subtitle is-3 has-text-danger"><i class="fas fa-exclamation-circle"></i> The form contains <%= pluralize(object.errors.count, "error") %>.</h3>
   <ul>
-    <% @user.errors.full_messages.each do |msg| %>
+    <% object.errors.full_messages.each do |msg| %>
     <li class="has-text-danger"><%= msg %></li>
     <% end %>
   </ul>
