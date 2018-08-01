@@ -32,9 +32,10 @@ body {
 
 /* ----- Profile box ----- */
 .profile-box {
-  height: 80vh;
+  height: calc(100vh - 9.5rem);
   border-radius: 4px;
   background-color: #fff;
+  margin-bottom: -3rem;
   .columns {
     height: 100%;
     .column {
@@ -87,7 +88,10 @@ body {
   @media screen and (max-width: 767px) {
     position: relative;
     right: inherit;
+    top: inherit;
     opacity: inherit;
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 }
 
