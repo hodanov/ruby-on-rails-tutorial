@@ -4,8 +4,13 @@
     <div class="profile-box">
       <div class="columns">
         <div class="column is-one-third post-form">
-          <div class="user-info">
-            <%= render 'shared/user_info' %>
+          <div class="card">
+            <div class="card-content user-info">
+              <%= render 'shared/user_info' %>
+            </div>
+            <div class="card-footer stats">
+              <%= render 'shared/stats' %>
+            </div>
           </div>
           <div class="micropost-form">
             <%= render 'shared/micropost_form' %>

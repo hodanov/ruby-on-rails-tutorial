@@ -12,6 +12,10 @@
             <p class="subtitle"><%= @user.email %></p>
             <h2>Microposts (<%= @user.microposts.count %>)</h2>
           </div>
+          <div class="stats">
+            <%= render 'shared/stats' %>
+          </div>
+          <%= render 'follow_form' if logged_in? %>
         </div>
         <% if @user.microposts.any? %>
         <div class="column microposts">

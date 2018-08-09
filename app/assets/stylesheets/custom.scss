@@ -1,10 +1,10 @@
 /* ----- Animation ----- */
 a {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  // -webkit-transition: all .2s;
+  // transition: all .2s;
 }
 @mixin css-animation {
-  transition: all .3s;
+  // transition: all .3s;
 }
 
 /* ----- Modify bulma.css ----- */
@@ -52,18 +52,38 @@ body {
       .box-user-info {
         text-align: center;
       }
+      .stats {
+        display: flex;
+        margin: 2rem 0;
+      }
+      .card {
+        border-radius: 4px;
+        margin-bottom: 3rem;
+        .user-info{
+          .user-name {
+            p, h1 {
+              display: inline-block;
+              vertical-align: top;
+            }
+          }
+        }
+        .stats {
+          display: flex;
+          margin: 0;
+        }
+      }
     }
     .post-form {
       justify-content: inherit;
       align-items: inherit;
       margin: 1rem;
     }
-    .microposts {
+    .microposts, .users-follow {
       justify-content: inherit;
       align-items: inherit;
-      .microposts-list {
+      .microposts-list, .users-follow-list {
         overflow-y: auto;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
       }
       .pagination-wrapper {
         margin: 0 auto;
@@ -76,6 +96,14 @@ body {
   @media screen and (max-width: 600px) {
     margin: -2rem;
   }
+}
+
+/* ----- Follow ----- */
+.user-avatars img {
+  border-radius: 50%;
+}
+.users-follow h3 {
+  padding: 0 1rem;
 }
 
 /* ----- Notification ----- */

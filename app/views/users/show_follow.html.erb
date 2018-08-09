@@ -1,0 +1,37 @@
+<% provide(:title, @title) %>
+<div class="columns">
+  <div class="column">
+    <div class="profile-box">
+      <div class="columns">
+        <div class="column is-one-third post-form">
+          <div class="card">
+            <div class="card-content user-info">
+              <%= render 'shared/user_info' %>
+            </div>
+            <div class="card-footer stats">
+              <%= render 'shared/stats' %>
+            </div>
+          </div>
+          <% if @users.any? %>
+          <div class="user-avatars">
+            <% @users.each do |user| %>
+            <%= link_to gravatar_for(user, size: 35), user %>
+            <% end %>
+          </div>
+          <% end %>
+        </div>
+        <div class="column users-follow">
+          <h3 class="title is-4"><%= @title %></h3>
+          <% if @users.any? %>
+          <div class="users-follow-list">
+            <%= render @users %>
+          </div>
+          <div class="pagination-wrapper">
+            <%= will_paginate %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
