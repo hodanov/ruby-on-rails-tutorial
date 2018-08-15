@@ -1,16 +1,16 @@
-$(document).on('turbolinks:load', function() {
+(function() {
+  $(document).on("turbolinks:load", function() {
+    return FontAwesome.dom.i2svg()
+  })
+}).call(this)
 
+$(document).ready(function() {
   Promise.all([])
-  .then(initFontAwesome)
   .then(initNavbarBurgar)
   .then(removeNotification)
   .then(showNotificationTooltip)
   .then(checkMaxUploadImageSize)
 })
-
-function initFontAwesome() {
-  FontAwesome.dom.i2svg()
-}
 
 function initNavbarBurgar() {
   var nuvbarBtn = $('.navbar-burger')

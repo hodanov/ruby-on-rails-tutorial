@@ -1,7 +1,10 @@
-<nav class="navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <%= link_to "Sample App", root_path, id: "logo", class: "navbar-item" %>
+      <%= link_to(root_path, id: "logo", class: "navbar-item") do %>
+      <span class="logo-triangle"></span>
+      <span>My Sample App</span>
+      <% end %>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -10,33 +13,59 @@
     </div>
     <div class="navbar-menu">
       <div class="navbar-end">
-        <%= link_to "Home", root_path, class: "navbar-item" %>
-        <%= link_to "About", about_path, class: "navbar-item" %>
-        <%= link_to "Help", help_path, class: "navbar-item" %>
-        <%= link_to "Contact", contact_path, class: "navbar-item" %>
+
+        <%= link_to(root_path, class: "navbar-item") do %>
+        <span class="icon has-text-primary"><i class="fas fa-home"></i></span>
+        <span>Home</span>
+        <% end %>
+
+        <%= link_to(about_path, class: "navbar-item") do %>
+        <span class="icon has-text-success"><i class="fas fa-info-circle"></i></span>
+        <span>About</span>
+        <% end %>
+
+        <%= link_to(help_path, class: "navbar-item") do %>
+        <span class="icon has-text-info"><i class="fas fa-question-circle"></i></span>
+        <span>Help</span>
+        <% end %>
+
+        <%= link_to(contact_path, class: "navbar-item") do %>
+        <span class="icon has-text-warning"><i class="fas fa-envelope"></i></span>
+        <span>Contact</span>
+        <% end %>
+
         <% if logged_in? %>
-          <%= link_to "Users", users_path, class: "navbar-item" %>
-          <div class="dropdown is-hoverable navbar-item">
-            <div class="dropdown-trigger">
-              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                <span>Account</span>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-              <div class="dropdown-content">
-                <%= link_to "Profile", current_user, class: "dropdown-item" %>
-                <%= link_to "Settings", edit_user_path(current_user), class: "dropdown-item" %>
-                <hr class="dropdown-divider">
-                <%= link_to "Log out", logout_path, method: :delete, class: "dropdown-item" %>
-              </div>
+          <%= link_to(users_path, class: "navbar-item") do %>
+          <span class="icon has-text-danger"><i class="fas fa-users"></i></span>
+          <span>Users</span>
+          <% end %>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="#" class="navbar-link">
+              <span class="icon has-text-orange"><i class="fas fa-user"></i></span>
+              <span>Account</span>
+            </a>
+            <div id="moreDropdown" class="navbar-dropdown">
+
+              <%= link_to(current_user, class: "navbar-item") do %>
+              <span class="icon has-text-orange"><i class="fas fa-address-card"></i></span>
+              <span>Profile</span>
+              <% end %>
+
+              <hr class="navbar-divider">
+
+              <%= link_to(logout_path, method: :delete, class: "navbar-item") do %>
+              <span class="icon has-text-orange"><i class="fas fa-sign-out-alt"></i></span>
+              <span>Log out</span>
+              <% end %>
+
             </div>
           </div>
-          <%=  %>
         <% else %>
-          <%= link_to "Log in", login_path, class: "navbar-item" %>
+          <%= link_to(login_path, class: "navbar-item") do %>
+          <span class="icon has-text-success"><i class="fas fa-sign-in-alt"></i></span>
+          <span>Log in</span>
+          <% end %>
         <% end %>
       </div>
     </div>

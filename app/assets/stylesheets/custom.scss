@@ -1,33 +1,35 @@
-/* ----- Animation ----- */
-a {
-  // -webkit-transition: all .2s;
-  // transition: all .2s;
-}
-@mixin css-animation {
-  // transition: all .3s;
-}
-
 /* ----- Modify bulma.css ----- */
 body {
   background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
-  // background-image: linear-gradient(to right top, #F53731, #FFC35D);
-}
-.navbar {
-  background-color: inherit;
 }
 .navbar #logo {
-  // color: #fff;
   font-size: 2rem;
   text-transform: uppercase;
+  @media screen and  (max-width: 600px) {
+    font-size: inherit;
+  }
 }
 .label {
   display: inline-block;
+}
+
+/* ----- Color ----- */
+.has-text-orange {
+  color: #f26522;
 }
 
 /* ----- Debug ----- */
 .debug_dump {
   background-color: #000;
   color: #d8d8d8;
+}
+
+/* ----- logo ----- */
+.logo-triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #00d1b2;
 }
 
 /* ----- Profile box ----- */
@@ -41,9 +43,9 @@ body {
     .column {
       height: 100%;
       display: flex;
-      justify-content: center;
       align-items: center;
       flex-direction: column;
+      overflow: auto;
       .box-user-image {
         img {
           border-radius: 50%;
@@ -74,9 +76,8 @@ body {
       }
     }
     .post-form {
-      justify-content: inherit;
-      align-items: inherit;
-      margin: 1rem;
+      width: 100%;
+      padding: 0 1rem;
     }
     .microposts, .users-follow {
       justify-content: inherit;
