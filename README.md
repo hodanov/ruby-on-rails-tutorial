@@ -12,7 +12,7 @@
 
 ## デモ
 
-下記リンクにアクセスし、ご覧ください。
+下記リンクにアクセスし、ご覧ください。  
 [My Sample App](https://rails-sample-app-by-hodaka.herokuapp.com/)
 
 ## 使い方
