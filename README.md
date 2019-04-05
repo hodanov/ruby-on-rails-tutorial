@@ -10,6 +10,11 @@
 ソースコードはMITライセンスとBeerwareライセンスのもとで公開されています。
 詳細は [LICENSE.md](LICENSE.md) をご覧ください。
 
+## デモ
+
+下記リンクにアクセスし、ご覧ください。
+[My Sample App](https://rails-sample-app-by-hodaka.herokuapp.com/)
+
 ## 使い方
 
 このアプリケーションを動かす場合は、まずはリポジトリを手元にクローンしてください。
